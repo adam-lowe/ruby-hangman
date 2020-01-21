@@ -3,7 +3,7 @@ class Hangman
         @word = words.sample
     end
     def words
-        ["variable", "class", "def"]
+        ["variable", "class", "def", "puts", "unless"]
     end
     
     def check
