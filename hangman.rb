@@ -11,6 +11,10 @@ class Hangman
         answer = answer.downcase
         unless @letter.include? answer
             puts "You have to guess a letter!"
+        elsif @word.include? answer
+            puts "That's a correct letter!"
+        else
+            puts "I'm confused"
         end
         
     end
