@@ -21,7 +21,7 @@ class Hangman
     end
 
     def guess
-        puts blank
+        puts @blank
         input = gets.chomp
         check_answer(input)
         if @game_finished == true
