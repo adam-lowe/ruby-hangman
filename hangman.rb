@@ -21,6 +21,7 @@ class Hangman
     end
 
     def guess
+        puts blank
         input = gets.chomp
         check_answer(input)
         if @game_finished == true
@@ -32,9 +33,8 @@ class Hangman
     
     
     def start
-        blank = "_ " * @word.length
+        @blank = "_ " * @word.length
         puts "This is ruby hangman, guess a letter of a ruby term! your word is #{@word.length} letters long"
-        puts blank
         guess
     end
 end
