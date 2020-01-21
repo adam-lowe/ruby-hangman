@@ -8,6 +8,7 @@ class Hangman
     end
 
     def check_answer(answer)
+        answer = answer.downcase
         unless @letter.include? answer
             puts "You have to guess a letter!"
         end
