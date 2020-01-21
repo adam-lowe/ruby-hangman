@@ -9,21 +9,26 @@ class Hangman
 
     def check_answer(answer)
         answer = answer.downcase
-        unless @letter.include? answer
+        if !@letter.include? answer
             puts "You have to guess a letter!"
         elsif @word.include? answer
             puts "That's a correct letter!"
         else
-            puts "I'm confused"
+            puts "Incorrect letter"
         end
         
     end
+
+    def guess
+        input = gets.chomp
+        check_answer(input)
+    end
+    
     
     def start
         puts "This is ruby hangman, guess a letter of a ruby term! your word is #{@word.length} letters long"
         puts "_ " * @word.length
-        input = gets.chomp
-        check_answer(input)
+        guess
     end
 end
 
