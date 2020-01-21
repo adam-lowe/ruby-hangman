@@ -2,6 +2,7 @@ class Hangman
     def initialize
         @word = words.sample
         @letter = ('a'..'z').to_a
+        @game_finished = false
     end
     def words
         ["variable", "class", "def", "puts", "unless"]
@@ -22,7 +23,11 @@ class Hangman
     def guess
         input = gets.chomp
         check_answer(input)
-        
+        if @game_finished == true
+            game_end
+        else
+            guess
+        end
     end
     
     
