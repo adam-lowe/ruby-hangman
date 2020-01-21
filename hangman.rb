@@ -1,6 +1,7 @@
 class Hangman
     def initialize
         @word = words.sample
+        @letter = ('a'..'z').to_a
     end
     def words
         ["variable", "class", "def", "puts", "unless"]
