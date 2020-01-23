@@ -17,7 +17,7 @@ class Hangman
             puts "That's a correct letter!"
             matches = @word.split("").each_index.select{|i| @word[i] == answer}
             matches.each { |i| @blank[i*2] = answer}
-            @game_status[0] += 1
+            @game_status[0] += matches.length
             @letter.delete(answer)
         else
             puts "Incorrect letter"
@@ -27,7 +27,7 @@ class Hangman
 
     def guess
         puts @blank
-        puts
+        puts @game_status[0].to_s + "/" + @game_status[1].to_s
         input = gets.chomp
         check_answer(input)
         if @game_status[0] == @game_status[1] 
