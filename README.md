@@ -4,4 +4,4 @@ This is a simple command line application that I built to get my feet wet with R
 
 ## What it does
 
-All it really does right now is give you a word to guess from a small array of ruby terms
+Gives you the length of a randomly chosen term (of 5) and gives you the chance to guess each letter, congratulating you once you guess the entire word
