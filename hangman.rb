@@ -15,6 +15,7 @@ class Hangman
             puts "You have to guess a new letter!"
         elsif @word.include? answer
             puts "That's a correct letter!"
+            p @word.split("").each_index.select{|i| @word[i] == answer}
             @letter.delete(answer)
         else
             puts "Incorrect letter"
