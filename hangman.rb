@@ -3,6 +3,7 @@ class Hangman
         @word = words.sample
         @letter = ('a'..'z').to_a
         @game_finished = false
+        @blank = "_ " * @word.length
     end
     def words
         ["variable", "class", "def", "puts", "unless"]
@@ -33,7 +34,6 @@ class Hangman
     
     
     def start
-        @blank = "_ " * @word.length
         puts "This is ruby hangman, guess a letter of a ruby term! your word is #{@word.length} letters long"
         guess
     end
