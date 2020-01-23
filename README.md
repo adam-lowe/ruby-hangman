@@ -5,3 +5,7 @@ This is a simple command line application that I built to get my feet wet with R
 ## What it does
 
 Gives you the length of a randomly chosen term (of 5) and gives you the chance to guess each letter, congratulating you once you guess the entire word
+
+## Here it is in action!
+
+![gif of game being played](images/hangman.gif)
