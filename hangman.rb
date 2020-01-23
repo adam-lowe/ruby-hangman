@@ -12,9 +12,10 @@ class Hangman
     def check_answer(answer)
         answer = answer.downcase
         if !@letter.include? answer
-            puts "You have to guess a letter!"
+            puts "You have to guess a new letter!"
         elsif @word.include? answer
             puts "That's a correct letter!"
+            @letter.delete(answer)
         else
             puts "Incorrect letter"
         end
