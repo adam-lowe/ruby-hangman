@@ -27,7 +27,7 @@ class Hangman
 
     def guess
         puts @blank
-        puts @game_status[0].to_s + "/" + @game_status[1].to_s
+        puts 
         input = gets.chomp
         check_answer(input)
         if @game_status[0] == @game_status[1] 
